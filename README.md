@@ -9,3 +9,13 @@
 ###    4. [GIT cli](https://git-scm.com/downloads)   
 ###    5. [GIT Documentation](https://git-scm.com/docs/gittutorial)
 
+
+### Creating Conda Environment
+
+```
+      1. Configure conda environment in environment variables if its not already configured
+```
+
+```
+      2. conda create -p <env_name> python=3.7 -y
+```
