@@ -36,3 +36,107 @@
       5. create app.py file
 ```
 
+```
+      6. to add files to git
+
+            git add .
+            git add filename
+            git add filename1 filename2
+```
+
+      7. To check versions maintained by git
+
+```
+            git log
+```
+
+      8. To check the status of git
+
+```
+            git status
+```
+
+#### Note : To ignoew file/folders we could add those details inside git.ignore
+
+
+```
+      9. To create version/commit all changes by git
+
+
+            git commit -m "message"
+```
+
+
+```
+      10.   To send version / changes to git hub
+
+            git push origin main
+
+            origin is a variable which consists git url https://github.com/vaibhavyaramwar/Machine_Learning_Project.git
+
+            to check the value of origin run below command
+
+            git remote -v
+```
+
+```
+
+            To check remote url 
+
+                  git remote -v
+```
+
+```
+            Revert git commit
+
+                  git revert <commit to revert>
+
+```
+
+```
+      To setup CICD pipline in Heroku we need 3 Information
+
+            1. HEROKU_EMAIL = vaibhav.yaramwar@gmail.com
+            2. HEROKU_API_KEY = a5046133-d463-4cc9-992e-a198c63902a9
+            3. HEROKU_API_NAME = ml-cicd-test
+
+```
+
+```
+      create dockerfile : name of file should be Dockerfile
+      create .dockerignore file
+```
+
+      BUILD DOCKER IMAGE
+
+```
+      docker build -t <image_name>:<tagname> .
+```
+
+Note : name of image always be in lower case
+
+
+To List Docker Image
+
+```
+      docker images
+
+```
+
+Run Docker Image
+
+```
+      docker run -p 5000:5000 -e PORT=5000 da5758f1ab10
+```
+
+To check running container in docker
+
+```
+      docker ps
+```
+
+To Stop Docker Container
+
+```
+      docker stop <container_id>
+```
