@@ -97,7 +97,7 @@
       To setup CICD pipline in Heroku we need 3 Information
 
             1. HEROKU_EMAIL = vaibhav.yaramwar@gmail.com
-            2. HEROKU_API_KEY = a5046133-d463-4cc9-992e-a198c63902a9
+            2. HEROKU_API_KEY = 
             3. HEROKU_API_NAME = ml-cicd-test
 
 ```
