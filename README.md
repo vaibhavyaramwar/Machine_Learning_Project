@@ -19,3 +19,20 @@
 ```
       2. conda create -p <env_name> python=3.7 -y
 ```
+
+```
+      3. conda activate venv/
+
+```
+
+```
+      4. create requirements.txt and start adding required dependencies of project in it and execute this file
+          To Exceute this file use command as below
+
+          pip install -r requirements.txt
+```
+
+```
+      5. create app.py file
+```
+
