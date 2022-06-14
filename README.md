@@ -8,6 +8,7 @@
 ###    3. [VS Code IDE](https://code.visualstudio.com/)
 ###    4. [GIT cli](https://git-scm.com/downloads)   
 ###    5. [GIT Documentation](https://git-scm.com/docs/gittutorial)
+###    6. [GITHUN Action](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
 
 
 ### Creating Conda Environment
