@@ -141,3 +141,15 @@ To Stop Docker Container
 ```
       docker stop <container_id>
 ```
+
+```
+      python setup.py install
+```
+
+
+#### The below command will look for all the local packages and build the local packages
+
+```
+      pip install -e .
+```
+
