@@ -153,3 +153,13 @@ To Stop Docker Container
       pip install -e .
 ```
 
+```
+    Create below packages under housing package
+
+      housing/component/__init__.p
+      housing/config/__init__.py
+      housing/entity/__init__.py
+      housing/exception/__init__.p
+      housing/logger/__init__.py
+      housing/pipeline/__init__.py
+```
