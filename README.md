@@ -163,3 +163,10 @@ To Stop Docker Container
       housing/logger/__init__.py
       housing/pipeline/__init__.py
 ```
+
+install ipykernal
+
+```
+      pip install ipykernal
+```
+
