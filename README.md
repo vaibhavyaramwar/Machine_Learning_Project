@@ -167,6 +167,6 @@ To Stop Docker Container
 install ipykernal
 
 ```
-      pip install ipykernal
+      pip install ipykernel
 ```
 
