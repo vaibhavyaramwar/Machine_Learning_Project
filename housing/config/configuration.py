@@ -15,7 +15,28 @@ class Configuration:
         self.time_stamp = current_time_stamp
 
     def get_data_ingestion_config(self) -> DataIngestionConfig:
-        pass
+        try:
+            data_ingestion_config_key=self.config_info[DATA_INGESTION_CONFIG_KEY]
+            artifact_dir = self.training_pipeline_config.artifact_dir
+            data_ingestion_artifact_dir = os.path.join(artifact_dir,DATA_INGESTION_ARTIFACT_DIR,self.time_stamp)
+
+            dataset_download_url = data_ingestion_config_key[DATA_INGESTION_DOWNLOAD_URL_KEY]
+            tgz_download_dir = os.path.join(data_ingestion_artifact_dir,data_ingestion_config_key[DATA_INGESTION_TGZ_DOWNLOAD_DIR_KEY])
+            raw_data_dir = os.path.join(data_ingestion_artifact_dir,data_ingestion_config_key[DATA_INGESTION_RAW_DATA_DIR_KEY])
+            ingested_dir = os.path.join(data_ingestion_artifact_dir,data_ingestion_config_key[DATA_INGESTION_INGESTED_DIR_NAME_KEY])
+            ingested_train_dir = os.path.join(ingested_dir,data_ingestion_config_key[DATA_INGESTION_TRAIN_DIR_KEY])
+            ingested_test_dir = os.path.join(ingested_dir,data_ingestion_config_key[DATA_INGESTION_TEST_DIR_KEY])
+
+            dataIngestionConfig = DataIngestionConfig(dataset_download_url=dataset_download_url, 
+            tgz_download_dir=tgz_download_dir, 
+            raw_data_dir = raw_data_dir, 
+            ingested_train_dir = ingested_train_dir, 
+            ingested_test_dir = ingested_test_dir)
+
+            return dataIngestionConfig
+
+        except Exception as e:
+            raise HousingException(e,sys) from e
 
     def get_data_validation_config(self) -> DataValidationConfig:
         pass
@@ -38,6 +59,8 @@ class Configuration:
             artifact_dir= os.path.join(ROOT_DIR,training_pipline_config[TRAINING_PIPELINE_NAME_KEY],training_pipline_config[TRAINING_PIPELINE_ARTIFACT_DIR_KEY])
             trainingPiplineConfig = TrainingPiplineConfig(artifact_dir=artifact_dir)
             logging.info(f"Training Pipeline Config : {training_pipline_config}")
+
+            return trainingPiplineConfig
         except Exception as e:
             raise HousingException(e,sys) from e
 
