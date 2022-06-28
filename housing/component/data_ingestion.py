@@ -1,4 +1,4 @@
-from curses import raw
+#from curses import raw
 from housing.entity.config_entity import DataIngestionConfig
 from housing.exception import HousingException
 import sys,os
@@ -41,7 +41,7 @@ class DataIngestion:
 
             logging.info(f"Downloading file from {[tgz_download_dir]} into {tgz_file_path}")
 
-            urllib.request.urlretrive(download_url,tgz_file_path)
+            urllib.request.urlretrieve(download_url,tgz_file_path)
 
             logging.info(f"Downloading completed and  file downloaded into {tgz_file_path}")
 
@@ -80,7 +80,7 @@ class DataIngestion:
 
             logging.info(f"Reding csv file : [{housing_file_path}]")
 
-            housing_data_frame = pd.DataFrame(housing_file_path)
+            housing_data_frame = pd.read_csv(housing_file_path)
 
             logging.info(f"Splitting data into train test split")
 

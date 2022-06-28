@@ -9,7 +9,7 @@ DataTransformationConfig = namedtuple("DataTransformationConfig",["add_bedroom_p
 
 ModelTrainingConfig = namedtuple("ModelTrainingConfig",["trained_model_file_path","base_accuracy"])
 
-ModelEvaluationConfig = namedtuple("ModelEvaluationConfig",["model_evaluation_file+path","time_stamp"])
+ModelEvaluationConfig = namedtuple("ModelEvaluationConfig",["model_evaluation_file_path","time_stamp"])
 
 ModelPusherConfig = namedtuple("ModelPusherConfig",["export_dir_path"])
 
