@@ -1,3 +1,4 @@
+from housing.exception import HousingException
 from housing.pipeline.pipeline import Pipeline
 from housing.logger import logging
 

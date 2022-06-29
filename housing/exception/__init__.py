@@ -18,9 +18,15 @@ class HousingException(Exception):
         """
 
         _,_,exec_tb = error_details.exc_info()
-        lineno = exec_tb.tb_frame.f_lineno
+        exception_block_line_no = exec_tb.tb_frame.f_lineno
+        try_block_line_no = exec_tb.tb_lineno
         filename = exec_tb.tb_frame.f_code.co_filename
-        error_message = f"Error Occured in [{filename}] at line no : [{lineno}] and error_message is : [{error_message}]"
+        
+        error_message = f"""Error Occured in [{filename}] 
+        at try block line no : [{try_block_line_no}] 
+        and exception block line no : [{exception_block_line_no}] 
+        and error_message is : [{error_message}]"""
+
         return error_message
 
     def __str__(self):
