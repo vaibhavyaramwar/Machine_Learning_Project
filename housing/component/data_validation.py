@@ -149,5 +149,7 @@ class DataValidation:
 
             logging.info(f"Data Validation Artifact : {[dataValidationArtifact]}")
 
+            return dataValidationArtifact
+
         except Exception as e:
             raise HousingException(e,sys) from e
