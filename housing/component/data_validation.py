@@ -20,6 +20,7 @@ class DataValidation:
     def __init__(self,dataValidationConfig:DataValidationConfig,
                        dataingestionArtifact:DataIngestionArtifact):
           try:
+            logging.info(f"{'>>' * 30}Data Validation log started.{'<<' * 30} ")
             self.dataValidationConfig = dataValidationConfig
             self.dataingestionArtifact = dataingestionArtifact
           except Exception as e:
@@ -153,3 +154,6 @@ class DataValidation:
 
         except Exception as e:
             raise HousingException(e,sys) from e
+
+    def __del__(self):
+        logging.info(f"{'='*20} Data Validation Log Completed {'='*20}")
